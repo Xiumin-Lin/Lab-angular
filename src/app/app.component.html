@@ -1,0 +1,10 @@
+<h1>Liste de Pokémon</h1>
+
+<!-- <input type="text" (click)="selectPokemon($event)" /> -->
+
+<input #input (keyup)="selectPokemon(input.value)" type="number" />
+<p>Vous avez sélectionné le pokémon: {{ pokemonSelected?.name }}</p>
+
+<p>{{ pokemonList[0].name }}</p>
+<p>{{ pokemonList[1].name }}</p>
+<p>{{ pokemonList[2].name }}</p>
