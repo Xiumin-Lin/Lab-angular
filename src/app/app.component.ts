@@ -30,4 +30,18 @@ export class AppComponent implements OnInit {
       console.log(`Vous avez demandé un pokémon qui n'existe pas`);
     }
   }
+
+  getPokemonTypeColor(pokemon: Pokemon) {
+    switch (pokemon.types[0]) {
+      case "Plante": return 'green';
+      case "Poison": return 'purple';
+      case "Feu": return 'red';
+      case "Eau": return 'blue';
+      case "Insecte": return 'darkolivegreen';
+      case "Normal": return 'gray';
+      case "Electrik": return 'yellow';
+      case "Fée": return 'fuchsia';
+      default: return 'gray';
+    }
+  }
 }
