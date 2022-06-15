@@ -32,16 +32,19 @@ export class AppComponent implements OnInit {
   }
 
   getPokemonTypeColor(pokemon: Pokemon) {
-    switch (pokemon.types[0]) {
-      case "Plante": return 'green';
-      case "Poison": return 'purple';
-      case "Feu": return 'red';
-      case "Eau": return 'blue';
-      case "Insecte": return 'darkolivegreen';
-      case "Normal": return 'gray';
-      case "Electrik": return 'yellow';
-      case "Fée": return 'fuchsia';
-      default: return 'gray';
+    switch (pokemon.types[0].toLowerCase()) {
+      case "combat": return 'peru';
+      case "eau": return 'blue';
+      case "electrik": return 'yellow';
+      case "feu": return 'red';
+      case "fée": return 'pink';
+      case "insecte": return 'darkolivegreen';
+      case "normal": return 'grey';
+      case "plante": return 'green';
+      case "poison": return 'purple';
+      case "psy": return 'darkviolet ';
+      case "vol": return 'aliceblue';
+      default: return 'grey';
     }
   }
 }
