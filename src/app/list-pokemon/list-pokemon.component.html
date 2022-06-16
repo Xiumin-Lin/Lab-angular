@@ -7,7 +7,7 @@
 <div class="container">
     <div class="row">
         <div *ngFor="let pkm of pokemonList" class="col m4 s6">
-            <div class="card horizontal" pkmBorderCard='{{getPokemonTypeColor(pkm)}}'>
+            <div class="card horizontal" (click)="goToPokemonDetail(pkm)" pkmBorderCard='{{getPokemonTypeColor(pkm)}}'>
                 <div class="card-image">
                     <img [src]="pkm.picture" alt="">
                 </div>

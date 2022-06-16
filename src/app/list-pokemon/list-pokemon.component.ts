@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { POKEMONS } from '../mock-pokemon-list';
 import { Pokemon } from '../pokemon';
 import Utils from '../utils';
@@ -10,8 +11,10 @@ import Utils from '../utils';
   ]
 })
 export class ListPokemonComponent {
+  constructor(private router: Router) { }
   pokemonList: Pokemon[] = POKEMONS;
   getPokemonTypeColor = (pkm: Pokemon) => Utils.getPokemonTypeColor(pkm);
+  goToPokemonDetail = (pkm: Pokemon) => this.router.navigate(['/pokemon', pkm.id])
 }
 
 // export class ListPokemonComponent implements OnInit {
