@@ -1,16 +1,31 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { POKEMONS } from '../mock-pokemon-list';
+import { Pokemon } from '../pokemon';
+import Utils from '../utils';
 
 @Component({
   selector: 'app-detail-pokemon',
-  templateUrl: './detail-pokemon.component.html',
-  styles: [
-  ]
+  templateUrl: './detail-pokemon.component.html'
 })
 export class DetailPokemonComponent implements OnInit {
+  pokemonList: Pokemon[];
+  pokemon: Pokemon | undefined;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.pokemonList = POKEMONS;
+    const pkmId: string | null = this.route.snapshot.paramMap.get('id');
+    if (pkmId) {
+      this.pokemon = this.pokemonList.find(pokemon => pokemon.id == +pkmId);
+    }
+  }
+
+  getPokemonTypeColor = (pkm: Pokemon) => Utils.getPokemonTypeColor(pkm);
+
+  goBack() {
+
   }
 
 }
