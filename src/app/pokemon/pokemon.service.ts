@@ -2,9 +2,8 @@ import { Injectable } from '@angular/core';
 import { POKEMONS } from './mock-pokemon-list';
 import { Pokemon } from './pokemon';
 
-@Injectable({
-  providedIn: 'root'
-})
+// Injection de service
+@Injectable()
 export class PokemonService {
   private pokemonTypeList: Array<string>;
 
