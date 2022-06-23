@@ -7,6 +7,7 @@ import { PokemonTypeColorPipe } from './pokemon-type-color.pipe';
 import { RouterModule, Routes } from '@angular/router';
 import { PokemonService } from './pokemon.service';
 import { PokemonFormComponent } from './pokemon-form/pokemon-form.component';
+import { FormsModule } from '@angular/forms';
 
 const pokemonRoutes: Routes = [
   { path: 'pokemons', component: ListPokemonComponent },
@@ -24,6 +25,7 @@ const pokemonRoutes: Routes = [
   ],
   imports: [
     CommonModule,
+    FormsModule,
     RouterModule.forChild(pokemonRoutes)
   ],
   // on fournit le service qu'au niveau de Pkm module et plus au niveau de la racine
