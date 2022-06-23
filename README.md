@@ -1,4 +1,7 @@
 # LabAngular
+Projet test pour apprendre à utiliser le framework Angular.
+
+Tuto Angular de [Simon Dieny](https://youtu.be/DTIYVffhJuU?list=PLhj0B5upo3RLxKK_1_29kbvNOLBA8hs5M)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.1.
 
